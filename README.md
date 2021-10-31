@@ -32,6 +32,8 @@ return ArrayHelper::merge(
 )
 ```
 
+Документация по API Яндекс.Расписаний находится по https://yandex.ru/dev/rasp/doc/concepts/about.html
+
 ### Примеры запросов к методам
 #### Тестирование модуля
 ```json
