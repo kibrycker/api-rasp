@@ -1,0 +1,175 @@
+### Тестирование модуля
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "test",
+  "params": {
+  }
+}
+
+
+### Получение списка рейсов между станциями с источника
+GET https://api.rasp.yandex.net/v3.0/search/?apikey={key}&format=json&from=c146&to=c213&lang=ru_RU&page=1&date=2021-10-29
+
+### Получение списка рейсов между станциями
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "search",
+  "params": {
+    "format": "json",
+    "from": "c146",
+    "to": "c213",
+    "lang": "ru_RU",
+    "page": 1,
+    "date": "2021-10-29",
+    "transport_types": "plane"
+  }
+}
+
+
+### Получение списка рейсов между станциями с источника
+GET https://api.rasp.yandex.net/v3.0/schedule/?apikey={key}&station=s9600213&transport_types=suburban&direction=на%20Москву
+
+### Получение списка рейсов между станциями
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "schedule",
+  "params": {
+    "station": "s9600213",
+    "transport_types": "suburban",
+    "direction": "на Москву"
+  }
+}
+
+
+### Получение список станций следования нитки с источника
+GET https://api.rasp.yandex.net/v3.0/thread/?apikey={key}&format=json&uid=6005x7505_0_9600213_g21_4&lang=ru_RU&show_systems=all
+
+### Получение список станций следования нитки
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "thread",
+  "params": {
+    "format": "json",
+    "uid": "6005x7505_0_9600213_g21_4",
+    "lang": "ru_RU",
+    "show_systems": "all"
+  }
+}
+
+
+### Получение список станций следования нитки с источника
+GET https://api.rasp.yandex.net/v3.0/nearest_stations/?apikey={key}&format=json&lat=50.440046&lng=40.4882367&distance=50&lang=ru_RU
+
+### Получение список станций следования нитки
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "nearest-stations",
+  "params": {
+    "format": "json",
+    "lat": "50.440046",
+    "lng": "40.4882367",
+    "distance": "50",
+    "lang": "ru_RU"
+  }
+}
+
+
+### Получение информации о ближайшем к указанной точке городе с источника
+GET https://api.rasp.yandex.net/v3.0/nearest_settlement/?apikey={key}&format=json&lat=50.440046&lng=40.4882367&distance=50&lang=ru_RU
+
+### Получение информации о ближайшем к указанной точке городе
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "nearest-settlement",
+  "params": {
+    "format": "json",
+    "lat": "50.440046",
+    "lng": "40.4882367",
+    "distance": "50",
+    "lang": "ru_RU"
+  }
+}
+
+
+### Получение информации о перевозчике по указанному коду перевозчика с источника
+GET https://api.rasp.yandex.net/v3.0/carrier/?format=json&apikey={key}&lang=ru_RU&code=TK&system=iata
+
+### Получение информации о перевозчике по указанному коду перевозчика
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "carrier",
+  "params": {
+    "lang": "ru_RU",
+    "code": "TK",
+    "system": "iata"
+  }
+}
+
+
+### Получение полного списка станций с источника
+GET https://api.rasp.yandex.net/v3.0/stations_list/?apikey={key}&lang=ru_RU&format=json
+
+### Получение полного списка станций
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "stations-list",
+  "params": {
+    "format": "json",
+    "lang": "ru_RU"
+
+  }
+}
+
+
+
+
+
+###
+POST https://martishkin.localhost/microbase/html/rasp/default
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "schedule-search",
+  "params": {
+    "url": "https://martishkin.ru",
+    "locale": "ru",
+    "strategy": "mobile",
+    "screenshot": "true",
+    "snapshots": "true"
+
+  }
+}
