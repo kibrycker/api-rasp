@@ -23,7 +23,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
     /** @var float|int Время жизни кэша по-умолчанию */
     const DURATION_CACHE = 3600 * 24;
 
-    /** @var string API Google-ключ */
+    /** @var string API Yandex-ключ, полученный в кабинете Разработчика */
     public string $apiYandexKey;
 
     /** @var string Собранный урл для получения расписания */

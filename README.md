@@ -28,7 +28,7 @@ return [
 ```php
 return ArrayHelper::merge(
     [... общая конфигурауия ...],
-    include __DIR__ . '/путь_до_файла_конфига_модуля/apikb.php'
+    include __DIR__ . '/путь_до_файла_конфига_модуля/rasp.php'
 )
 ```
 
